@@ -1,0 +1,372 @@
+/*---------------------------------------------------------------------------------------------------------------------------*/
+/*                                                     GMRZ STYLES                                                           */
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+	/* Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+	/* Reset */
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	a {
+		text-decoration: none!important;
+	}
+
+
+	/* Generals */
+	html {
+		font-size: 22px;
+	}
+
+	@media (max-width: 960px) {
+		html {
+			font-size: 20px;
+		}
+	}
+
+	@media (max-width: 720px) {
+		html {
+			font-size: 18px;
+		}
+	}
+	
+	body {
+		color: #fff!important;
+		font-family: 'calibri', sans-serif!important;
+		background-color: #1f1f23;
+	}
+
+	img {
+		max-width: 100%;
+	}
+
+	button, 
+	button:focus, 
+	button:active,
+	input:focus {
+		outline: none;
+	}
+
+
+    /* Components and Pages */
+
+
+	/* Header */
+	header {
+	    width: 100%!important;
+		height: 60px!important;
+	    padding: 0 1rem!important;
+	    z-index: 3!important;
+		display: flex!important;
+		justify-content: space-around!important;
+		align-items: center!important;
+    	transition: 400ms all ease-in;
+	}
+
+	header a,
+	header button {
+        color: #cccccc;
+		font-size: 1rem;
+		background: none;
+		border: none;
+	}
+
+	header a:hover,
+	header button:hover {
+		color: #fff;
+	    transition: all 300ms ease-in-out;
+	}
+
+    .parallax {
+        width: 100%; 
+        height: 70vh;
+		position: relative;
+		background-image: url('/img/bg.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+		background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .parallax img {
+        width: 150px;
+    }
+
+	.ufo {
+		position: absolute;
+		right: 0;
+		animation: move 8s linear infinite; 
+	}
+
+	@keyframes move {
+		0% {
+			top: 90%;
+			right: 0;
+		}
+
+		25% {
+			top: 10%;
+			right: 25%;
+		}
+
+		50% {
+			top: 90%;
+			right: 50%;
+		}
+
+		75% {
+			top: 10%;
+			right: 75%;
+		}
+
+		100% {
+			top: 90%;
+			right: 100%;
+		}
+	}
+
+    .parallax h3 {
+        color: #cccccc;
+        padding: 0 2rem;
+        text-align: center;
+    }
+
+    #logo {
+        font-family: 'Press Start 2P', cursive;
+        color: #ecf0f1;
+    }
+
+    .hero {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .hero .notice {
+        width: 600px;
+        margin: 1rem auto;
+        color: #ecf0f1;
+    }
+
+	.hero .ty {
+        text-align: center;
+        color: #ecf0f1;
+    }
+
+	.hero h4 {
+        text-align: center;
+        color: #ecf0f1;
+		margin: 2rem auto;
+    }
+
+	.row.grid {
+	    display: grid;
+	    grid-template-columns: repeat(auto-fit, 29%);
+	    grid-gap: 2rem;
+	    justify-content: center;
+	}
+
+	.product {
+		position: relative;
+		background-color: #fff;
+	    border-radius: 1rem;
+	    overflow: hidden;
+	    height: 320px;
+	    width: 100%;
+	    background-repeat: no-repeat;
+	    background-position: center;
+	    background-size: cover;
+	}
+
+	.product p {
+		position: absolute;
+        background: rgba(0, 0, 0, 0.25);
+        width: 100%;
+		height: 100%;
+        color: #fff;
+        font-weight: 700;
+        padding: 0.5rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 1.6rem;
+	}   
+	
+	.analisis {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+		padding: 1rem;
+    }
+
+	.analisis header {
+		margin: 1rem auto;
+	}
+
+	.analisis h1,
+	.analisis p {
+		width: 1000px;
+	}
+
+	.analisis h1 {
+		font-size: 2rem;
+		text-align: center;
+	}
+
+	.analisis .img {
+		width: 500px;
+		background-color: #fff;
+		border-radius: 1rem;
+		margin: 2rem auto;
+	}
+
+	.caracteristicas {
+		margin: 1rem 0;
+	}
+	
+	.row .col img {
+		cursor: pointer;
+		border-radius: 1rem;
+	}
+
+	.modal {
+		display: none;
+		position: fixed;
+		z-index: 1;
+		padding-top: 100px;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		background-color: #000;
+	}
+
+	.modal-content {
+		/* position: relative; */
+		background-color: #fefefe;
+		margin: 1rem auto;
+		width: 90%;
+		max-width: 1000px;
+	}
+
+	.close {
+		color: #fff;
+		position: absolute;
+		top: 10px;
+		right: 25px;
+		font-size: 35px;
+		font-weight: bold;
+	}
+	
+	.close:hover,
+	.close:focus {
+		color: #999;
+		text-decoration: none;
+		cursor: pointer;
+	}
+
+	.mySlides {
+		display: none;
+		position: relative;
+	}
+	
+	.prev,
+	.next {
+		cursor: pointer;
+		position: absolute;
+		width: auto;
+		padding: 0.8rem;
+		color: #1f1f23!important;
+		font-weight: bold;
+		font-size: 3rem;
+		transition: all 700ms ease-in-out;
+		border-radius: 0 3px 3px 0;
+		user-select: none;
+		-webkit-user-select: none;
+	}
+	
+	.next {
+		right: 0;
+		border-radius: 3px 0 0 3px;
+	}
+
+	.prev:hover,
+	.next:hover {
+		background-color: rgba(0, 0, 0, 0.8);
+		color: #fff!important;
+	}
+	
+	.numbertext {
+		color: #000!important;
+		font-size: 0.9rem;
+		padding: 0.8rem;
+		position: absolute;
+		bottom: 0;
+	}
+	
+	.caption-container {
+		background-color: #000;
+		padding: 0.5rem;
+	}
+	
+	.caption-container #caption{
+		width: 100%;
+		text-align: center;
+		color: #fff;
+	}
+	
+	img.demo {
+		opacity: 0.6;
+	}
+	
+	.active,
+	.demo:hover {
+		opacity: 1;
+	}
+
+	.product-box {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		padding: 2rem;
+		margin: 2rem;
+	}
+
+	@media (max-width: 1000px) {
+		.analisis h1,
+		.analisis p,
+		.caracteristicas {
+            width: 90%;
+        }
+	}
+
+	@media (max-width: 768px) {
+        .hero .notice {
+            width: 90%;
+        }
+		
+		.row.grid {
+            grid-template-columns: repeat(auto-fit, 100%);
+        }
+
+		.product p {
+			font-size: 2rem;
+		}
+	}
+
+	@media (max-width: 420px) {
+		.parallax img {
+			width: 100px;
+		}
+	}
