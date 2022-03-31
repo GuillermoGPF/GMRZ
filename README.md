@@ -13,6 +13,12 @@
 
 Gaming product analysis platform
 
+## Website screenshot
+
+<div align="center">
+    <img src="./img/GMRZ.png" alt="screenshot">
+</div>
+
 
 ## Contact
 
